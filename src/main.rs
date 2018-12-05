@@ -89,8 +89,8 @@ commit: {}
  *            Global options and helpers                                     *
  * ------------------------------------------------------------------------- */
 
-const APPLICATION_DIRECTORY_NAME : &'static str = "cardano-cli";
-const APPLICATION_ENVIRONMENT_ROOT_DIR : &'static str = "CARDANO_CLI_ROOT_DIR";
+const APPLICATION_DIRECTORY_NAME : &'static str = "luceo";
+const APPLICATION_ENVIRONMENT_ROOT_DIR : &'static str = "LUCEO_ROOT_DIR";
 
 fn get_default_root_dir() -> PathBuf {
     match dirs::data_local_dir() {

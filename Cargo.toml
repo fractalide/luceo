@@ -1,15 +1,16 @@
 [package]
-name = "cardano-cli"
-version = "1.0.0-alpha3"
+name = "luceo"
+version = "1.0.0"
 authors = [ "Nicolas Di Prima <nicolas.diprima@iohk.io>"
           , "Vincent Hanquez <vincent.hanquez@iohk.io>"
+          , "Stewart Mackenzie <setori88@gmail.com>"
           ]
 license = "MIT OR Apache-2.0"
-repository = "https://github.com/input-output-hk/cardano-cli"
-homepage = "https://github.com/input-output-hk/cardano-cli#README.md"
-documentation = "https://github.com/input-output-hk/cardano-cli#USAGE.md"
+repository = "https://github.com/fractalide/luceo"
+homepage = "https://fractalide.com"
+documentation = "https://github.com/fractalide/luceo#USAGE.md"
 description = """
-The Cardano command line interface:
+The Luceo command line interface:
 
 * powerful blockchain manager: download, explore, verify, analyse;
 * manage multiple wallets: daedalus', icarus' or other kind of wallets;
@@ -32,9 +33,9 @@ env_logger = "0.5"
 humantime = "1.1"
 cbor_event = "1.0"
 cryptoxide = "0.1"
-exe-common      = { path = "cardano-deps/exe-common" }
-cardano-storage = { path = "cardano-deps/storage" }
-storage-units   = { path = "cardano-deps/storage-units" }
+exe-common      = { path = "../luceo-common/exe-common" }
+cardano-storage = { path = "../luceo-common/storage" }
+storage-units   = { path = "../luceo-common/storage-units" }
 base64 = "0.9"
 
 [dependencies.clap]
@@ -43,5 +44,5 @@ default-features = false
 features = [ "suggestions", "color", "wrap_help" ]
 
 [dependencies.cardano]
-path = "cardano-deps/cardano"
+path = "../luceo-common/cardano"
 features = [ "generic-serialization" ]
